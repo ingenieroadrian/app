@@ -1,81 +1,88 @@
+<?php include('../templates/cabecera.php');?>
 
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Title</title>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
+  <title>Landing Page Liga Vallecaucana de Tenis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .container {
+      margin-top: 50px;
+    }
 
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    .lead-capture {
+      background-color: #f8f9fa;
+      padding: 50px;
+      border-radius: 5px;
+    }
 
+    .aliados-carousel .carousel-inner {
+      display: flex;
+      align-items: center;
+    }
+
+    .aliados-carousel .carousel-item {
+      justify-content: center;
+    }
+
+    .aliados-carousel img {
+      max-height: 100px;
+      margin: 0 20px;
+    }
+  </style>
 </head>
-
 <body>
-  <header>
-    <!-- place navbar here -->
-    <div class="container">
-  <div class="row">
-    <div class="col-md-4">
-
-    <form action= "secciones/index.php" >
-   
-    </div>
-    <div class="col-md-4">
-       <div class="card">
-        <div class="card-header">
-            Login
-        </div>
-        <div class="card-body">
-            <h4 class="card-title"></h4>
-            
-            <form action="{{route('login')}}" method="POST">
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text"> Escriba su usuario </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <button type="submit" class="btn btn-success">Iniciar Sesión</button>
-                        <a href="{{route('register')}}" class="btn btn-danger">Registrarse</a>
-                        </form>
-             </div>
-        <div class="card-footer text-muted">
-
-        if you need help contact us example@example.com
-            
-        </div>
-
-        </form>
-       </div>
-    </div>
+  <!-- Lado Izquierdo - Captura de Leads -->
+<div class="col-md-6">
+  <div class="lead-capture">
+    <img src="ruta_imagen_banner.jpg" alt="Banner de Bienvenida" class="img-fluid mb-4">
+    <h2>¡Únete a la Liga Vallecaucana de Tenis!</h2>
+    <p>Ingresa tus datos para recibir noticias, eventos y promociones relacionadas con el tenis en el Valle del Cauca.</p>
+    <form>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+      </div>
+      <button type="submit" class="btn btn-primary">¡Quiero recibir noticias!</button>
+    </form>
   </div>
 </div>
 
-  </header>
 
+      <!-- Lado Derecho - Carrusel de Aliados -->
+      <div class="col-md-6 mt-4 mt-md-0">
+        <div class="aliados-carousel">
+          <div id="carouselAliados" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="ruta_logo_aliado_1.png" alt="Aliado 1">
+              </div>
+              <div class="carousel-item">
+                <img src="ruta_logo_aliado_2.png" alt="Aliado 2">
+              </div>
+              <div class="carousel-item">
+                <img src="ruta_logo_aliado_3.png" alt="Aliado 3">
+              </div>
+              <!-- Agregar más aliados aquí -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <main>
-
-  </main>
-  <footer>
-    <!-- place footer here -->
-  </footer>
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
+
+
+<?php include('../templates/pie.php');?>
 
